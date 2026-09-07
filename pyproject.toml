@@ -1,0 +1,32 @@
+[project]
+name = "jobpilot-cn"
+version = "0.1.0"
+description = "半自动国内求职 agent：抓岗 → AI 打分 → 打招呼语/简历要点 → 人工发送"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "GriffithLin" }]
+dependencies = [
+    "typer>=0.12",
+    "rich>=13.7",
+    "openai>=1.40",
+    "anthropic>=0.40",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "playwright>=1.45",
+]
+
+[project.scripts]
+jp = "jobpilot.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobpilot"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+# 搜索配置：每平台关键词 × 城市
+# 复制到 ~/.jobpilot-cn/searches.yaml 后按需修改
+
+boss:
+  keywords: ["算子开发", "GPU 优化", "CUDA"]
+  cities: ["北京", "上海", "深圳"]
+
+liepin:
+  keywords: ["算子开发", "异构计算"]
+  cities: ["北京", "上海"]
